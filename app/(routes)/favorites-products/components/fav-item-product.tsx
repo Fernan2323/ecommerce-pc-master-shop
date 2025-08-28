@@ -6,14 +6,12 @@ import { formatPrice } from "@/lib/formatPrice"
 import { cn } from "@/lib/utils"
 import { ProductType } from "@/types/product"
 import { X } from "lucide-react"
-import { useRouter } from "next/navigation"
 
 interface FavItemProductProps {
     product: ProductType
 }
 
 const FavItemProduct = ({product}: FavItemProductProps) => {
-    const router = useRouter()
     const { removeLovedItem } = usefavoriteProducts()
     const { addItem } = useCart()
 
