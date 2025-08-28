@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 
-const success = () => {
+const Success = () => {
   const router = useRouter()
   return (
     <div className="max-w-5xl p-4 mx-auto sm:py-16 sm:px-24">
@@ -24,4 +24,4 @@ const success = () => {
   )
 }
 
-export default success
+export default Success

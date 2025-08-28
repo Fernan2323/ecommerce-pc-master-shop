@@ -1,6 +1,6 @@
 "use client"
 import { useGetCategories } from "@/api/getProducts"
-import { CategoryType, CategoryTypeVariant } from "@/types/category"
+import { CategoryTypeVariant } from "@/types/category"
 import Link from "next/link"
 
 const ChooseCategory = () => {
@@ -17,7 +17,6 @@ const ChooseCategory = () => {
         href={`/category/${category.slug}`}
         className="relative w-full overflow-hidden bg-no-repeat bg-cover rounded-lg group"
       >
-        {/* Contenedor con altura fija y relación */}
         <div className="w-full aspect-[4/3]">
           <img
             src={`${process.env.NEXT_PUBLIC_URL_LOCALHOST}${category.mainImage.url}`}
@@ -26,7 +25,6 @@ const ChooseCategory = () => {
           />
         </div>
 
-        {/* Texto superpuesto */}
         <p className="absolute bottom-0 w-full py-2 text-lg font-bold text-center text-white backdrop-blur-lg">
           {category.categoryName}
         </p>

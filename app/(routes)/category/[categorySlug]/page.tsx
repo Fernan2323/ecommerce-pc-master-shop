@@ -2,24 +2,19 @@
 
 import { useGetCategoryProducts } from "@/api/getCategoryProducts"
 import { Separator } from "@/components/ui/separator"
-import { useParams, useRouter } from "next/navigation"
+import { useParams} from "next/navigation"
 import SkeletonSchema from "@/components/SkeletonSchema"
 import ProductCard from "./components/ProductCard"
 import { ProductType } from "@/types/product"
-import { useState } from "react"
 
 export default function Page() {
     const params = useParams()
     const slug = Array.isArray(params.categorySlug) ? params.categorySlug[0] : params.categorySlug ?? "capsula"
     const {result, loading} = useGetCategoryProducts(slug)
-    const [filterOrigin, setFilterOrigin] = useState("")
-    const router = useRouter()
 
 
    const filteredProducts: ProductType[] = !loading
-    ? filterOrigin === ""
     ? result
-    : result.filter((product) => product.origin === filterOrigin)
     : []
 
     return (
@@ -33,7 +28,6 @@ export default function Page() {
              <Separator />
 
              <div className="sm:flex sm:justify-between">
-                 {/* <FiltersControls setFilterOrigin={setFilterOrigin} /> */}
              </div>
 
              <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">

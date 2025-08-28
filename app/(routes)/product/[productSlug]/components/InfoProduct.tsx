@@ -5,7 +5,7 @@ import { useCart } from "@/hooks/useCart"
 import { usefavoriteProducts } from "@/hooks/useFavoriteProducts"
 import { formatPrice } from "@/lib/formatPrice"
 import { ProductType } from "@/types/product"
-import { Heart, ShoppingCart } from "lucide-react"
+import { Heart } from "lucide-react"
 
 
 export type InfoProductProps = {
@@ -14,7 +14,7 @@ export type InfoProductProps = {
 
 const InfoProduct = ({product}: InfoProductProps) => {
 
-  const { addItem, items } = useCart()
+  const { addItem } = useCart()
   const { addLovedItem } = usefavoriteProducts()
 
   return (

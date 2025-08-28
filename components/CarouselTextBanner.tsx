@@ -32,7 +32,7 @@ export const dataCarouselTop = [
     },
 ]
 
-const carouselTextBanner = () => {
+const CarouselTextBanner = () => {
     const router = useRouter()
   return (
     <div className="bg-gray-200 dark:bg-primary">
@@ -65,4 +65,4 @@ const carouselTextBanner = () => {
   )
 }
 
-export default carouselTextBanner
+export default CarouselTextBanner

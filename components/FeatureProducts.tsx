@@ -12,8 +12,8 @@ import { useCart } from "@/hooks/useCart"
 import { formatPrice } from "@/lib/formatPrice"
 
 const FeatureProducts = () => {
-  const { loading, error, result } = useGetFeatureProducts()
-  const {addItem, items} = useCart()
+  const { loading, result } = useGetFeatureProducts()
+  const {addItem} = useCart()
   const router = useRouter()
   console.log("result", result)
   return (
@@ -29,7 +29,7 @@ const FeatureProducts = () => {
           {
             
               result.map((product: ProductType) => {
-                const { id, images, slug, productName, taste, origin, price } = product
+                const { id, images, slug, productName, price } = product
 
                 return (
                   <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group">
