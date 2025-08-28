@@ -1,16 +1,16 @@
 "use client"
 
 import { useGetCategoryProducts } from "@/api/getCategoryProducts"
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/separator"
 import { useParams, useRouter } from "next/navigation"
-import SkeletonSchema from "@/components/SkeletonSchema";
-import ProductCard from "./components/ProductCard";
-import { ProductType } from "@/types/product";
-import { useState } from "react";
+import SkeletonSchema from "@/components/SkeletonSchema"
+import ProductCard from "./components/ProductCard"
+import { ProductType } from "@/types/product"
+import { useState } from "react"
 
 export default function Page() {
     const params = useParams()
-    const slug = Array.isArray(params.categorySlug) ? params.categorySlug[0] : params.categorySlug ?? "capsula";
+    const slug = Array.isArray(params.categorySlug) ? params.categorySlug[0] : params.categorySlug ?? "capsula"
     const {result, loading} = useGetCategoryProducts(slug)
     const [filterOrigin, setFilterOrigin] = useState("")
     const router = useRouter()
@@ -20,7 +20,7 @@ export default function Page() {
     ? filterOrigin === ""
     ? result
     : result.filter((product) => product.origin === filterOrigin)
-    : [];
+    : []
 
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">

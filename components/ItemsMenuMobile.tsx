@@ -1,5 +1,5 @@
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
-import { Menu } from 'lucide-react'
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover"
+import { Menu } from "lucide-react"
 import Link from "next/link"
 
 const ItemsMenuMobile = () => {

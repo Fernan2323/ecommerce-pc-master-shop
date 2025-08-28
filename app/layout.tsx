@@ -1,25 +1,25 @@
 
-import type { Metadata } from "next";
-import { Geist_Mono, Urbanist } from "next/font/google";
-import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { Toaster } from "sonner";
-import NextTopLoader from "nextjs-toploader";
+import type { Metadata } from "next"
+import { Geist_Mono, Urbanist } from "next/font/google"
+import "./globals.css"
+import NavBar from "@/components/NavBar"
+import Footer from "@/components/Footer"
+import { ThemeProvider } from "@/components/ThemeProvider"
+import { Toaster } from "sonner"
+import NextTopLoader from "nextjs-toploader"
 const urbanist = Urbanist({
   subsets: ["latin"],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata: Metadata = {
   title: "PC Master shop!",
   description: "Arma la PC de tus sueños",
-};
+}
 
 export default function RootLayout({
   children,
@@ -59,5 +59,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

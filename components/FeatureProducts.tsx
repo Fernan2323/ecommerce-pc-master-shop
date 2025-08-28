@@ -1,15 +1,15 @@
 "use client"
-import { useGetFeatureProducts } from '@/api/getFeatureProducts'
-import React from 'react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel'
-import SkeletonSchema from './SkeletonSchema'
-import { ProductType } from '@/types/product'
-import { Card, CardContent } from './ui/card'
-import { Expand, ShoppingCart } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import IconButton from './IconButton'
-import { useCart } from '@/hooks/useCart'
-import { formatPrice } from '@/lib/formatPrice'
+import { useGetFeatureProducts } from "@/api/getFeatureProducts"
+import React from "react"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
+import SkeletonSchema from "./SkeletonSchema"
+import { ProductType } from "@/types/product"
+import { Card, CardContent } from "./ui/card"
+import { Expand, ShoppingCart } from "lucide-react"
+import { useRouter } from "next/navigation"
+import IconButton from "./IconButton"
+import { useCart } from "@/hooks/useCart"
+import { formatPrice } from "@/lib/formatPrice"
 
 const FeatureProducts = () => {
   const { loading, error, result } = useGetFeatureProducts()

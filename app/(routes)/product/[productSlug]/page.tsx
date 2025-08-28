@@ -8,7 +8,7 @@ import InfoProduct from "./components/InfoProduct"
 export default function Page() {
     const params = useParams()
     const {productSlug} = params
-    const slug = Array.isArray(productSlug) ? productSlug[0] : productSlug ?? "";
+    const slug = Array.isArray(productSlug) ? productSlug[0] : productSlug ?? ""
     const { result, loading } = useGetProductBySlug(slug)
      
       if (loading || !result || result.length === 0) {

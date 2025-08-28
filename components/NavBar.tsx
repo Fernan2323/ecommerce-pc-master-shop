@@ -14,7 +14,7 @@ const NavBar = () => {
     const router = useRouter()
   return (
     <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
-        <h1 onClick={()=> router.push('/')} className="text-3xl">PC Master Shop!
+        <h1 onClick={()=> router.push("/")} className="text-3xl">PC Master Shop!
         </h1>
         <div className="Items-center justify-between hidden sm:flex">
             <MenuList />

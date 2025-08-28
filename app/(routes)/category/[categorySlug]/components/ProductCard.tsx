@@ -44,7 +44,7 @@ const ProductCard = (props: ProductCardProps) => {
                     className="text-gray-600"
                   />
                   <IconButton
-                    onClick={() => console.log('product')}
+                    onClick={() => console.log("product")}
                     icon={<ShoppingCart size={20} />}
                     className="text-gray-600"
                   />

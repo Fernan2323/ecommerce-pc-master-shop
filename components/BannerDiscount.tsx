@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { buttonVariants } from './ui/button'
+import Link from "next/link"
+import { buttonVariants } from "./ui/button"
 
 const BannerDiscount = () => {
   return (
