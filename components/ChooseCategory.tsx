@@ -19,7 +19,7 @@ const ChooseCategory = () => {
       >
         <div className="w-full aspect-[4/3]">
           <img
-            src={`${process.env.NEXT_PUBLIC_URL_LOCALHOST}${category.mainImage.url}`}
+            src={`${category.mainImage.url}`}
             alt={category.categoryName}
             className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110"
           />
