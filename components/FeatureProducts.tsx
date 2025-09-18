@@ -15,7 +15,6 @@ const FeatureProducts = () => {
   const { loading, result } = useGetFeatureProducts()
   const {addItem} = useCart()
   const router = useRouter()
-  console.log("result", result)
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
       <h3 className="px-6 text-3xl sm:pb-8">Productos destacados</h3>
@@ -36,7 +35,7 @@ const FeatureProducts = () => {
                     <div className="p-1">
                       <Card className="py-4 border border-gray-200 shadow-none h-[520px]" >
                         <CardContent className="relative flex items-center justify-center px-6 py-2 h-[400px] ">
-                          <img src={`${process.env.NEXT_PUBLIC_URL_LOCALHOST}${images[0].url}`}
+                          <img src={`${images[0].url}`}
                             alt="Image featured" className="object-cover" />
                           <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                             <div className="flex justify-center gap-x-6">

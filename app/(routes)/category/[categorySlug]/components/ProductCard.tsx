@@ -29,7 +29,7 @@ const ProductCard = (props: ProductCardProps) => {
               {/* Contenedor con proporción fija */}
               <div className="w-full aspect-square overflow-hidden rounded-xl">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_URL_LOCALHOST}${image.url}`}
+                  src={`${image.url}`}
                   alt="image"
                   className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110"
                 />

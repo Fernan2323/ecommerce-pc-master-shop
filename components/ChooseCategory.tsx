@@ -19,13 +19,13 @@ const ChooseCategory = () => {
       >
         <div className="w-full aspect-[4/3]">
           <img
-            src={`${category.mainImage.url}`}
+            src={`${category.mainImage?.url}`}
             alt={category.categoryName}
             className="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110"
           />
         </div>
 
-        <p className="absolute bottom-0 w-full py-2 text-lg font-bold text-center text-white backdrop-blur-lg">
+        <p className="absolute bottom-0 w-full py-2 text-lg font-bold text-center text-white bg-black/40 backdrop-blur-lg">
           {category.categoryName}
         </p>
       </Link>
